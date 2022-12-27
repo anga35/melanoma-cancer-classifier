@@ -39,7 +39,7 @@ classifier=SVC()
 # hyper_parameters=[{'gamma':[0.01,0.001,0.0001],'C':[1,10,100,1000]}]
 
 # Set an early stopping condition
-threshold = 0.9
+# threshold = 0.9
 
 
 classifier.fit(x_shuffled, y_shuffled)
@@ -50,8 +50,8 @@ best_estimator=classifier
 y_prediction=best_estimator.predict(x_test)
 score=accuracy_score(y_true=y_test,y_pred=y_prediction)
 
-if score > threshold:
-     pickle.dump(best_estimator,open('./model.pkl','wb'))
+# if score > threshold:
+#     pickle.dump(best_estimator,open('./model.pkl','wb'))
 
 print(f'The accuracy score is {score}')
 
